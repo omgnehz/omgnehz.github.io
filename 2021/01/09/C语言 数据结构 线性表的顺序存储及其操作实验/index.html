@@ -1,0 +1,238 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>C语言 数据结构 线性表的顺序存储及其操作实验 [ Soymilk ]</title>
+  
+<link rel="shortcut icon" href="/favicon/favicon.ico">
+
+<link rel="stylesheet" href="/lib/highlight/monokai-sublime.css">
+
+<link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css">
+
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+
+<link rel="stylesheet" href="/css/milk.css">
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body>
+  <div class="milk-header">
+     
+
+  <nav class="header-nav">
+     
+    <ul class="nav-menu">
+      
+        <li id="Home">
+          <i class="fa fa-home" aria-hidden="true"></i>
+          <a href="/ ">Home</a>
+        </li>
+      
+        <li id="Archives">
+          <i class="fa fa-archive" aria-hidden="true"></i>
+          <a href="/archives ">Archives</a>
+        </li>
+      
+        <li id="About">
+          <i class="fa fa-user-circle" aria-hidden="true"></i>
+          <a href="/about ">About</a>
+        </li>
+      
+    </ul>
+    
+    
+      <span class="nav-date">
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+        <span id="date"></span>
+      </span>
+    
+    
+    
+      <span class="nav-system" id="nav-system"></span>
+    
+    
+    <span class="nav-access">
+      <i class="fa fa-universal-access" id="nav-access"></i>
+      <i class="fa fa-angle-down"></i>
+      <div class="dropdown-content" id="dropdown-content">
+        <ul class="social">
+          
+            <li>
+              <a target="_blank" rel="noopener" href="https://github.com/MRsoymilk">
+                <i class="fa fa-github-alt" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+            <li>
+              <a href="mailto:codermrsoymilk@gmail.com">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <li><span>Power by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a></span></li>
+        </ul>
+      </div>
+    </span>
+  </nav>
+ 
+  </div>
+  <div class="milk-body">
+    
+<div class="draggable-toc">
+  <div class="toc-title">C语言 数据结构 线性表的顺序存储及其操作实验</div>
+  <p>process: <span>0</span></p>
+  <div class="progress-container">
+    <div class="progress-bar" id="bar"></div>
+  </div>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#C%E8%AF%AD%E8%A8%80-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E5%8F%8A%E5%85%B6%E6%93%8D%E4%BD%9C%E5%AE%9E%E9%AA%8C"><span class="toc-text">C语言 数据结构 线性表的顺序存储及其操作实验</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%AE%9E%E8%B7%B5%E3%80%82"><span class="toc-text">.顺序表的基本操作实践。</span></a></li></ol></li></ol>
+</div>
+
+<div class="post-content" id="post-content">
+  <div id="top">C语言 数据结构 线性表的顺序存储及其操作实验</div>
+  <div class="post">
+    
+    <div class="content-categories">
+      
+      <i class="fa fa-location-arrow"></i>
+      <ul>
+        <li>categories</li>
+        
+      </ul>
+    
+    </div>
+    <hr>
+    
+    <h1 id="C语言-数据结构-线性表的顺序存储及其操作实验"><a href="#C语言-数据结构-线性表的顺序存储及其操作实验" class="headerlink" title="C语言 数据结构 线性表的顺序存储及其操作实验"></a>C语言 数据结构 线性表的顺序存储及其操作实验</h1><p>C语言 数据结构 线性表的顺序存储及其操作实验</p>
+<h2 id="顺序表的基本操作实践。"><a href="#顺序表的基本操作实践。" class="headerlink" title=".顺序表的基本操作实践。"></a>.顺序表的基本操作实践。</h2><p><strong>1.顺序表的基本操作实践。</strong> 实现顺序表的建立、输入、输出、查找、插入、删除等功能，每个功能用一个函数实现。</p>
+<p>(1)建立4个元素的顺序表list[]={3，2，4，5}，实现顺序表建立的基本操作。</p>
+<p>(2)在list[]={3，2，4，5}的元素4和5之间插入一个元素9，实现顺序表插入的基本操作。</p>
+<p>(3)在list[]={3，3，4，9，5}中删除指定位置（i=3）上的元素4，实现顺序表的删除的基本操作。</p>
+<p><strong>2. 基本算法实践。</strong> 若一个线性表采用顺序表L存储，其中所有元素为整数。设计一个时间空间尽可能高效的算法，将所有元素分成两部分，其中前部分元素均小于等于整数k1，后部分均大于等于整数k2。例如：{6,4,10,7,9,2,20,1,3,30}，k1=5，k2=8时候，一种结果为（[3,4,1,2],,6,7,[20,10,9,30]）。（其实这题应该可以直接将顺序表排序也可达到题目要求，但这就与k1,k2无任何关系，与出题初衷不符（也可能是我想错了！！！））</p>
+<p><strong>3.有序顺序表基本算法实践</strong>。假设表示集合的顺序表是一个有序顺序表，设计一个高效的算法实现集合求差集运算，即C=A-B。例如A={1，3，4，5，6，7}，B={3，5，6，8，9，11}，输出A-B的结果={1,4,7}<br>—————————————————————————<br>完整代码</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MaxSize 50</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ElemType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElemType data[MaxSize];</span><br><span class="line">    <span class="keyword">int</span> length;</span><br><span class="line">&#125;Sqlist;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreateList1</span><span class="params">(Sqlist *&amp;L,ElemType a[],<span class="keyword">int</span> n)</span><span class="comment">//第一题，建立线性表并将题中数据元素输入</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>,k=<span class="number">0</span>;</span><br><span class="line">    L = (Sqlist *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Sqlist));</span><br><span class="line">    <span class="keyword">while</span>(i&lt;n)</span><br><span class="line">    &#123;</span><br><span class="line">    L-&gt;data[k]=a[i];</span><br><span class="line">    k++;i++;</span><br><span class="line">    &#125;</span><br><span class="line">    L-&gt;length = k;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreateList</span><span class="params">(Sqlist *&amp;L)</span><span class="comment">//建立线性表并输入数据元素</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    L = (Sqlist *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Sqlist));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;请规定线性表长度&quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;L-&gt;length);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> q=<span class="number">0</span>;q&lt;L-&gt;length;q++)&#123;<span class="comment">//将值赋给新创建的顺序表</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;请输入第%d个元素&quot;</span>,q+<span class="number">1</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;L-&gt;data[q]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DispList</span><span class="params">(Sqlist *L)</span><span class="comment">//输出线性表</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;L-&gt;length;i++)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\t&quot;</span>,L-&gt;data[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">LocateElem</span><span class="params">(Sqlist *L,ElemType e)</span><span class="comment">//按元素查找,因题中未做要求，故未调用</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;L-&gt;length&amp;&amp;L-&gt;data[i]!=e)</span><br><span class="line">        i++;</span><br><span class="line">    <span class="keyword">if</span>(i&gt;=L-&gt;length)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> i+<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">ListInsert</span><span class="params">(Sqlist *&amp;L,<span class="keyword">int</span> i,ElemType e)</span><span class="comment">//插入数据元素（按题中要求）</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> j;</span><br><span class="line">    <span class="keyword">if</span>(i&lt;<span class="number">1</span>||i&gt;L-&gt;length+<span class="number">1</span>||L-&gt;length==MaxSize)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    i--;</span><br><span class="line">    <span class="keyword">for</span> (j=L-&gt;length;j&gt;i;j--)</span><br><span class="line">        L-&gt;data[j]=L-&gt;data[j<span class="number">-1</span>];</span><br><span class="line">    L-&gt;data[i]=e;</span><br><span class="line">    L-&gt;length++;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">ListDlete</span><span class="params">(Sqlist *&amp;L,<span class="keyword">int</span> i)</span><span class="comment">//删除数据元素（按题中要求）</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> j;</span><br><span class="line">    <span class="keyword">if</span>(i&lt;<span class="number">1</span>||i&gt;L-&gt;length)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    i--;</span><br><span class="line">    <span class="keyword">for</span>(j=i;j&lt;L-&gt;length<span class="number">-1</span>;j++)</span><br><span class="line">        L-&gt;data[i]=L-&gt;data[j+<span class="number">1</span>];</span><br><span class="line">    L-&gt;length--;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Partitionl</span><span class="params">(Sqlist *&amp;L,Sqlist *&amp;C,<span class="keyword">int</span> k1,<span class="keyword">int</span> k2)</span></span>;<span class="comment">//声明函数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DifferenceSet</span><span class="params">(Sqlist *LA,Sqlist *LB,Sqlist *&amp;LC)</span></span>;<span class="comment">//声明函数</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Sqlist *L;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;第一题\n\n&quot;</span>);</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">4</span>]=&#123;<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>&#125;,e;</span><br><span class="line">    CreateList1(L, a, <span class="number">4</span>);<span class="comment">//按题目要求创建顺序表</span></span><br><span class="line">    DispList(L);<span class="comment">//输出顺序表</span></span><br><span class="line">    ListInsert(L,<span class="number">4</span>,<span class="number">9</span>);<span class="comment">//按题目要求插入数据元素</span></span><br><span class="line">    DispList(L);<span class="comment">//输出线性表</span></span><br><span class="line">    ListDlete(L,<span class="number">3</span>);<span class="comment">//删除指定位置（i=3）上的元素</span></span><br><span class="line">    DispList(L);<span class="comment">//输出线性表</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n第二题\n&quot;</span>);</span><br><span class="line">    <span class="keyword">int</span> k1,k2;</span><br><span class="line">    Sqlist *C;</span><br><span class="line">    C=(Sqlist *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Sqlist));<span class="comment">//创建一个新的线性表</span></span><br><span class="line">    CreateList(L);<span class="comment">//创建顺序表并输入数据元素</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;请规定k1的大小&quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;k1);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;请规定k2的大小&quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;k2);</span><br><span class="line">    Partitionl(L,C,k1,k2);</span><br><span class="line">    DispList(C);<span class="comment">//输出第二题要求的线性表</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n第三题\n&quot;</span>);</span><br><span class="line">    Sqlist *LA,*LB,*LC;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;线性表A\n&quot;</span>);</span><br><span class="line">    CreateList(LA);<span class="comment">//创建顺序表LA并输入数据元素</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;线性表B\n&quot;</span>);</span><br><span class="line">    CreateList(LB);<span class="comment">//创建顺序表LB并输入数据元素</span></span><br><span class="line">    DifferenceSet(LA,LB,LC);<span class="comment">//求差集</span></span><br><span class="line">    DispList(LC);<span class="comment">//输出第三题要求的线性表</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Partitionl</span><span class="params">(Sqlist *&amp;L,Sqlist *&amp;C,<span class="keyword">int</span> k1,<span class="keyword">int</span> k2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>,j=L-&gt;length<span class="number">-1</span>,t=<span class="number">0</span>,z=<span class="number">0</span>;</span><br><span class="line">    C-&gt;length=L-&gt;length;<span class="comment">//规定新线性表的长度</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> q=<span class="number">0</span>;q&lt;L-&gt;length;q++)&#123;</span><br><span class="line">       <span class="keyword">if</span>(L-&gt;data[q]&gt;=k2)&#123;<span class="comment">//将大于k2的元素放入顺序表</span></span><br><span class="line">            C-&gt;data[j]=L-&gt;data[q];</span><br><span class="line">            j--;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">if</span>(L-&gt;data[q]&lt;=k1)&#123;<span class="comment">//将小于k1的元素从头放入顺序表</span></span><br><span class="line">            C-&gt;data[i]=L-&gt;data[q];</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">       &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> q=<span class="number">0</span>;q&lt;L-&gt;length;q++)&#123;<span class="comment">//将大小处于k1k2之间的元素放入顺序表</span></span><br><span class="line">        <span class="keyword">if</span>(L-&gt;data[q]&gt;k1&amp;&amp;L-&gt;data[q]&lt;k2)&#123;</span><br><span class="line">            C-&gt;data[i]=L-&gt;data[q];</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;输出的线性表为\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DifferenceSet</span><span class="params">(Sqlist *LA,Sqlist *LB,Sqlist *&amp;LC)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>,j=<span class="number">0</span>,k=<span class="number">0</span>;</span><br><span class="line">    LC=(Sqlist *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Sqlist));<span class="comment">//创建一个新的线性表</span></span><br><span class="line">    <span class="keyword">while</span>(i&lt;LA-&gt;length&amp;&amp;j&lt;LB-&gt;length)&#123;</span><br><span class="line">        <span class="keyword">if</span>(LA-&gt;data[i]&lt; LB-&gt;data[j])&#123;<span class="comment">//比较A、B两个线性表中数据元素的大小</span></span><br><span class="line">            LC-&gt;data[k]=LA-&gt;data[i];</span><br><span class="line">            i++;k++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(LA-&gt;data[i]&gt; LB-&gt;data[j])&#123;</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;                  <span class="comment">//(LA-&gt;data[i]= LB-&gt;data[j]</span></span><br><span class="line">            i++;j++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;LA-&gt;length)&#123;      <span class="comment">//若A的长度大于B的长度</span></span><br><span class="line">        LC-&gt;data[k]=LA-&gt;data[i];</span><br><span class="line">        i++;k++;</span><br><span class="line">     &#125;</span><br><span class="line">    LC-&gt;length=k;          <span class="comment">//线性表的长度为k</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;A和B的差集为\n&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>—————————————————————————<br>运行结果：<img src="https://img-blog.csdnimg.cn/2020102623304991.png#pic_center" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201026232853532.png#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201026232853536.png#pic_center" alt="在这里插入图片描述"><br>当时为方便将输出截图插入实验报告中，将“\t”改成了“、”，截完图之后又把“、”改回了“\t” 。</p>
+
+    
+    <hr>
+    <div class="content-tags">
+      
+      <i class="fa fa-tags"></i>
+      <ul>
+        
+      </ul>
+    
+    </div>
+    
+     
+<div class="comment-tabs" id="comment-tabs">
+  comment:
+  <ul>
+    
+      <li><a href="#Valine">Valine</a></li>
+    
+    
+      <li><a href="#LiveRe">LiveRe</a></li>
+    
+    
+      <li><a href="#ChangYan">ChangYan</a></li>
+    
+  </ul>
+  
+  
+    <div id="ChangYan">
+      <!--PC和WAP自适应版-->
+      <div id="SOHUCS" ></div> 
+      <script type="text/javascript"> 
+      (function(){ 
+      var appid = 'cyuGH4lBk'; 
+      var conf = 'ae32d85e4ca99348209aedfd3ae01478'; 
+      var width = window.innerWidth || document.documentElement.clientWidth; 
+      if (width < 960) {
+      var head = document.getElementsByTagName('head')[0]||document.head||document.documentElement;
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.charset = 'utf-8';
+      script.id = 'changyan_mobile_js';
+      script.src = 'https://cy-cdn.kuaizhan.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf;
+      head.appendChild(script);
+      } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://cy-cdn.kuaizhan.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); 
+      </script>
+    </div>
+   
+  
+  
+    <div id="LiveRe">
+      
+        <!-- LiveRe City install code -->
+        <div id="lv-container" data-id="city" data-uid="MTAyMC80NjA4MS8yMjU5Mg==">
+          <script type="text/javascript">
+            (function(d, s) {
+              var j, e = d.getElementsByTagName(s)[0];
+              if (typeof LivereTower === 'function') { return; }
+              j = d.createElement(s);
+              j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+              j.async = true;
+              e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+          </script>
+          <noscript>Please activate JavaScript for write a comment in LiveRe</noscript>
+          </div>
+          <!-- completed City install code -->
+        
+    </div>
+  
+  
+  
+    <div id="Valine">
+      <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+      <div id="vcomments"></div>
+      <script>
+        new Valine({
+          el: '#vcomments',
+          appId: '5bHFwYPW2iHWCiV7WmNRSenk-gzGzoHsz',
+          appKey: '2q4UgVDTmeJf9Phe8VbnNKyC',
+          avatar: 'monsterid',
+          enableQQ: true
+        })
+      </script>
+    </div>
+   
+</div>
+
+  </div>
+</div>
+ 
+<div>
+  <button id="scroll2top">back to top</button>
+</div>
+  </div>
+  
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/jquery/jquery-ui.min.js"></script>
+
+
+<script src="/lib/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+<script src="/lib/highlight/highlight.pack.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+<script src="/js/milk.js"></script>
+
+</body>
+</html>
