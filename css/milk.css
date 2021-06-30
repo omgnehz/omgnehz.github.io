@@ -368,7 +368,7 @@ blockquote {
 }
 .post table {
   color: #f5deb3;
-  text-align: center;
+  text-align: left;
   border: 2px solid #ed1c40;
   width: 100%;
   border-radius: 0.25rem;
