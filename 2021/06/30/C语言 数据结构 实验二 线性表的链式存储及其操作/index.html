@@ -1,0 +1,242 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> [ Soymilk ]</title>
+  
+<link rel="shortcut icon" href="/favicon/favicon.ico">
+
+<link rel="stylesheet" href="/lib/highlight/monokai-sublime.css">
+
+<link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css">
+
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+
+<link rel="stylesheet" href="/css/milk.css">
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body>
+  <div class="milk-header">
+     
+
+  <nav class="header-nav">
+     
+    <ul class="nav-menu">
+      
+        <li id="Home">
+          <i class="fa fa-home" aria-hidden="true"></i>
+          <a href="/ ">Home</a>
+        </li>
+      
+        <li id="Archives">
+          <i class="fa fa-archive" aria-hidden="true"></i>
+          <a href="/archives ">Archives</a>
+        </li>
+      
+        <li id="About">
+          <i class="fa fa-user-circle" aria-hidden="true"></i>
+          <a href="/about ">About</a>
+        </li>
+      
+    </ul>
+    
+    
+      <span class="nav-date">
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+        <span id="date"></span>
+      </span>
+    
+    
+    
+      <span class="nav-system" id="nav-system"></span>
+    
+    
+    <span class="nav-access">
+      <i class="fa fa-universal-access" id="nav-access"></i>
+      <i class="fa fa-angle-down"></i>
+      <div class="dropdown-content" id="dropdown-content">
+        <ul class="social">
+          
+            <li>
+              <a target="_blank" rel="noopener" href="https://github.com/MRsoymilk">
+                <i class="fa fa-github-alt" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+            <li>
+              <a href="mailto:codermrsoymilk@gmail.com">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <li><span>Power by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a></span></li>
+        </ul>
+      </div>
+    </span>
+  </nav>
+ 
+  </div>
+  <div class="milk-body">
+    
+<div class="draggable-toc">
+  <div class="toc-title"></div>
+  <p>process: <span>0</span></p>
+  <div class="progress-container">
+    <div class="progress-bar" id="bar"></div>
+  </div>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#C%E8%AF%AD%E8%A8%80-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AE%9E%E9%AA%8C%E4%BA%8C-%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E9%93%BE%E5%BC%8F%E5%AD%98%E5%82%A8%E5%8F%8A%E5%85%B6%E6%93%8D%E4%BD%9C"><span class="toc-text">C语言 数据结构 实验二 线性表的链式存储及其操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E6%8C%87%E5%AF%BC%E6%80%9D%E6%83%B3%E3%80%91"><span class="toc-text">【指导思想】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84%E5%8F%8A%E8%A6%81%E6%B1%82%E3%80%91"><span class="toc-text">【实验目的及要求】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9%E3%80%91"><span class="toc-text">【实验内容】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E5%AE%9E%E9%AA%8C%E6%AD%A5%E9%AA%A4%E5%92%8C%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3%E3%80%91"><span class="toc-text">【实验步骤和设计思想】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E7%A8%8B%E5%BA%8F%E6%B8%85%E5%8D%95%E3%80%91"><span class="toc-text">【程序清单】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C"><span class="toc-text">输出结果</span></a></li></ol>
+</div>
+
+<div class="post-content" id="post-content">
+  <div id="top"></div>
+  <div class="post">
+    
+    <div class="content-categories">
+      
+      <i class="fa fa-location-arrow"></i>
+      <ul>
+        <li>categories</li>
+        
+      </ul>
+    
+    </div>
+    <hr>
+    
+    <h2 id="C语言-数据结构-实验二-线性表的链式存储及其操作"><a href="#C语言-数据结构-实验二-线性表的链式存储及其操作" class="headerlink" title="C语言 数据结构 实验二 线性表的链式存储及其操作"></a>C语言 数据结构 实验二 线性表的链式存储及其操作</h2><p> 实验项目：线性表的链表实现：遍历、插入、删除、翻转<br>实验类型: 基础性</p>
+<h2 id="【指导思想】"><a href="#【指导思想】" class="headerlink" title="【指导思想】"></a>【指导思想】</h2><p>用链表存储线性表，实现线性表的基本操作。</p>
+<h2 id="【实验目的及要求】"><a href="#【实验目的及要求】" class="headerlink" title="【实验目的及要求】"></a>【实验目的及要求】</h2><p>1、    复习C语言的指针的定义、链表的使用；<br>2、    理解线性表的属性；<br>3、    实践线性表的链式实现方法以及相关的操作。<br>4、    要求：提交实验报告，附源程序</p>
+<p>涉及的知识点：</p>
+<ul>
+<li>线性表的逻辑属性、运算</li>
+<li>带表头的单链表的操作：定义、输入、输出、链表内容的翻转</li>
+<li>元素/链表的操作：元素的插入、删除</li>
+</ul>
+<h2 id="【实验内容】"><a href="#【实验内容】" class="headerlink" title="【实验内容】"></a>【实验内容】</h2><p>1.单链表的基本操作实践。实现单链表的建立（头插、尾插）、销毁、判空、输出、查找、插入、删除等功能，每个功能用一个函数实现。<br>(1)建立10个元素的链表list：{1,3,2,2,0,4,7,6,5,8}，实现单链表的建立的基本操作。<br>(2)删除链表list：{1,3,2,9,0,4,7,6,5,8}的元素第一个值为2的元素，再在5号位置插入元素2，实现单链表的删除、插入的基本操作。<br>(3)对(2)步结果的单链表list：{1,3,9,0,2,4,7,6,5,8}的结点进行排序操作，得单链表list：{0,1,2,3,4,5,6,7,8,9}。<br>2. 基本算法实践。某非空带头结点单链表L中的元素为整数，实现将所有小于零的结点移到所有大于等于零的结点前面。例如L= {1,-3,-2,-9,0,4,7,-6,-5,8}，输出新L的结果={-5, -6, -9,-2, -3,1, 0,4,7, 8}</p>
+<h2 id="【实验步骤和设计思想】"><a href="#【实验步骤和设计思想】" class="headerlink" title="【实验步骤和设计思想】"></a>【实验步骤和设计思想】</h2><p>一、建立数组，并将题目中的数据输入，再将数组转化为链表进行后续操作<br>二、将大于零的结点通过尾结点放到链表的后面，再将小于零的结点通过头结点放到链表的前面</p>
+<h2 id="【程序清单】"><a href="#【程序清单】" class="headerlink" title="【程序清单】"></a>【程序清单】</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ElemType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	ElemType data;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">LNode</span> *<span class="title">next</span>;</span>		<span class="comment">//指向后继结点</span></span><br><span class="line">&#125; LinkNode;					<span class="comment">//声明单链表结点类型</span></span><br><span class="line"><span class="comment">//尾插</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreateList1</span><span class="params">(LinkNode *&amp;L,ElemType a[],<span class="keyword">int</span> n)</span><span class="comment">//建立链表，并将数组元素输入</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LinkNode *S,*R;</span><br><span class="line">    L=(LinkNode *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LinkNode));</span><br><span class="line">    R=L;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        S=(LinkNode *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LinkNode));</span><br><span class="line">        S-&gt;data=a[i];</span><br><span class="line">        R-&gt;next=S;</span><br><span class="line">        R=S;</span><br><span class="line">    &#125;</span><br><span class="line">    R-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//头插法</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreateListF</span><span class="params">(LinkNode *&amp;L,ElemType a[],<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    LinkNode *s;</span><br><span class="line">    L=(LinkNode *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LinkNode));</span><br><span class="line">    L-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        s=(LinkNode *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LinkNode));</span><br><span class="line">        s-&gt;data=a[i];</span><br><span class="line">        s-&gt;next=L-&gt;next;</span><br><span class="line">        L-&gt;next=s;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DestroyList</span><span class="params">(LinkNode *&amp;L)</span><span class="comment">//销毁线性表</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LinkNode *pre=L,*p=L-&gt;next;</span><br><span class="line">    <span class="keyword">while</span>(p!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="built_in">free</span>(pre);</span><br><span class="line">        pre=p;</span><br><span class="line">        p=p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">free</span>(pre);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">ListEmpty</span><span class="params">(LinkNode *&amp;L)</span><span class="comment">//判断线性表是否为空</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span>(L-&gt;next==<span class="literal">NULL</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DispList</span><span class="params">(LinkNode *L)</span><span class="comment">//输出链表</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LinkNode *p=L-&gt;next;</span><br><span class="line">    <span class="keyword">while</span>(p!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d、&quot;</span>,p-&gt;data);</span><br><span class="line">        p=p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">LocateElem</span><span class="params">(LinkNode *L,ElemType e)</span><span class="comment">//按元素查找</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">1</span>;</span><br><span class="line">    LinkNode *p=L-&gt;next;</span><br><span class="line">    <span class="keyword">while</span>(p!=<span class="literal">NULL</span>&amp;&amp;p-&gt;data!=e)&#123;</span><br><span class="line">        p=p-&gt;next;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(p==<span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> (<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        e=p-&gt;data;</span><br><span class="line">        <span class="keyword">return</span> (i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">ListInsert</span><span class="params">(LinkNode *&amp;L,<span class="keyword">int</span> i,ElemType e)</span><span class="comment">//插入数据元素</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> j=<span class="number">0</span>;</span><br><span class="line">    LinkNode *p=L,*s;</span><br><span class="line">    <span class="keyword">if</span>(i&lt;=<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">while</span>(j&lt;i<span class="number">-1</span>&amp;&amp;p!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        j++;</span><br><span class="line">        p=p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(p==<span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        s=(LinkNode *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LinkNode));</span><br><span class="line">        s-&gt;data=e;</span><br><span class="line">        s-&gt;next=p-&gt;next;</span><br><span class="line">        p-&gt;next=s;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">ListDalete</span><span class="params">(LinkNode *&amp;L,<span class="keyword">int</span> i,ElemType &amp;e)</span><span class="comment">//删除数据元素</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> j=<span class="number">0</span>;</span><br><span class="line">    LinkNode *p=L,*q;</span><br><span class="line">    <span class="keyword">if</span>(i&lt;=<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">while</span>(j&lt;i&amp;&amp;p!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        j++;</span><br><span class="line">        p=p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(p==<span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        q=p-&gt;next;</span><br><span class="line">        <span class="keyword">if</span>(q==<span class="literal">NULL</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        e=q-&gt;data;</span><br><span class="line">        p-&gt;next=q-&gt;next;</span><br><span class="line">        <span class="built_in">free</span>(q);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SortList</span><span class="params">(LinkNode *&amp;L)</span></span>;<span class="comment">//声明函数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Separation</span><span class="params">(LinkNode *L)</span></span>;<span class="comment">//声明函数</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  LinkNode *L;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;实验一：\n&quot;</span>);</span><br><span class="line">  <span class="keyword">int</span> a[<span class="number">10</span>]=&#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">8</span>&#125;;<span class="comment">//第一题第一问</span></span><br><span class="line">  CreateList1(L,a,<span class="number">10</span>);</span><br><span class="line">  DispList(L);</span><br><span class="line">  <span class="keyword">int</span> b[<span class="number">10</span>]=&#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">9</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">8</span>&#125;,i,e;</span><br><span class="line">  CreateList1(L,b,<span class="number">10</span>);<span class="comment">//第一题第二问删除第一个元素为二</span></span><br><span class="line">  LocateElem(L,<span class="number">2</span>);</span><br><span class="line">  ListDalete(L,i,e);</span><br><span class="line">  DispList(L);</span><br><span class="line">  ListInsert(L,<span class="number">5</span>,<span class="number">2</span>);</span><br><span class="line">  DispList(L);</span><br><span class="line">  SortList(L);<span class="comment">//第一题第三问</span></span><br><span class="line">  DispList(L);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;实验二：\n&quot;</span>);</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    LinkNode *L2;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;请规定单链表的长度：&quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">int</span> c[n];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;请输入单链表的第%d个元素：&quot;</span>,i+<span class="number">1</span>);</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;c[i]);</span><br><span class="line">    &#125;</span><br><span class="line">  CreateList1(L,c,n);</span><br><span class="line">  Separation(L);</span><br><span class="line">  DispList(L);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SortList</span><span class="params">(LinkNode *&amp;L)</span><span class="comment">//插入排序</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t=<span class="number">0</span>;</span><br><span class="line">    LinkNode *temp,*p;</span><br><span class="line">    <span class="keyword">for</span> ( temp = L-&gt;next-&gt;next; temp != <span class="literal">NULL</span>; temp = temp-&gt;next)&#123;</span><br><span class="line">        <span class="keyword">for</span> ( p = L; p-&gt;next != <span class="literal">NULL</span>; p = p-&gt;next)&#123;</span><br><span class="line">            <span class="keyword">if</span> (p-&gt;next-&gt;data &gt; temp-&gt;data)<span class="comment">//比较大小</span></span><br><span class="line">            &#123;</span><br><span class="line">                t = temp-&gt;data;</span><br><span class="line">                temp-&gt;data = p-&gt;next-&gt;data;</span><br><span class="line">                p-&gt;next-&gt;data = t;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;排序之后\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Separation</span><span class="params">(LinkNode *L)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LinkNode *p,*q,*i;</span><br><span class="line">    p=L-&gt;next;</span><br><span class="line">    L-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">    i=L;<span class="comment">//i为单链表L的尾结点</span></span><br><span class="line">    <span class="keyword">while</span>(p!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="keyword">while</span>(i-&gt;next!=<span class="literal">NULL</span>)</span><br><span class="line">            i=i-&gt;next;<span class="comment">//保证i为尾结点</span></span><br><span class="line">        q=p-&gt;next;<span class="comment">//q保存p结点后继结点的指针</span></span><br><span class="line">        <span class="keyword">if</span>(p-&gt;data&gt;=<span class="number">0</span>)&#123;<span class="comment">//比0大或者相等的尾插法</span></span><br><span class="line">            p-&gt;next=i-&gt;next;</span><br><span class="line">            i-&gt;next=p;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;<span class="comment">//比0小的头插法</span></span><br><span class="line">            p-&gt;next=L-&gt;next;</span><br><span class="line">            L-&gt;next=p;</span><br><span class="line">        &#125;</span><br><span class="line">        p=q;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h2><p><img src="https://img-blog.csdnimg.cn/20201110163811901.png#pic_center" alt="在这里插入图片描述"></p>
+<p><strong><em>欢迎大佬指正</em></strong></p>
+
+    
+    <hr>
+    <div class="content-tags">
+      
+      <i class="fa fa-tags"></i>
+      <ul>
+        
+      </ul>
+    
+    </div>
+    
+     
+<div class="comment-tabs" id="comment-tabs">
+  comment:
+  <ul>
+    
+      <li><a href="#Valine">Valine</a></li>
+    
+    
+      <li><a href="#LiveRe">LiveRe</a></li>
+    
+    
+      <li><a href="#ChangYan">ChangYan</a></li>
+    
+  </ul>
+  
+  
+    <div id="ChangYan">
+      <!--PC和WAP自适应版-->
+      <div id="SOHUCS" ></div> 
+      <script type="text/javascript"> 
+      (function(){ 
+      var appid = 'cyuGH4lBk'; 
+      var conf = 'ae32d85e4ca99348209aedfd3ae01478'; 
+      var width = window.innerWidth || document.documentElement.clientWidth; 
+      if (width < 960) {
+      var head = document.getElementsByTagName('head')[0]||document.head||document.documentElement;
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.charset = 'utf-8';
+      script.id = 'changyan_mobile_js';
+      script.src = 'https://cy-cdn.kuaizhan.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf;
+      head.appendChild(script);
+      } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://cy-cdn.kuaizhan.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); 
+      </script>
+    </div>
+   
+  
+  
+    <div id="LiveRe">
+      
+        <!-- LiveRe City install code -->
+        <div id="lv-container" data-id="city" data-uid="MTAyMC80NjA4MS8yMjU5Mg==">
+          <script type="text/javascript">
+            (function(d, s) {
+              var j, e = d.getElementsByTagName(s)[0];
+              if (typeof LivereTower === 'function') { return; }
+              j = d.createElement(s);
+              j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+              j.async = true;
+              e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+          </script>
+          <noscript>Please activate JavaScript for write a comment in LiveRe</noscript>
+          </div>
+          <!-- completed City install code -->
+        
+    </div>
+  
+  
+  
+    <div id="Valine">
+      <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+      <div id="vcomments"></div>
+      <script>
+        new Valine({
+          el: '#vcomments',
+          appId: '5bHFwYPW2iHWCiV7WmNRSenk-gzGzoHsz',
+          appKey: '2q4UgVDTmeJf9Phe8VbnNKyC',
+          avatar: 'monsterid',
+          enableQQ: true
+        })
+      </script>
+    </div>
+   
+</div>
+
+  </div>
+</div>
+ 
+<div>
+  <button id="scroll2top">back to top</button>
+</div>
+  </div>
+  
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/jquery/jquery-ui.min.js"></script>
+
+
+<script src="/lib/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+<script src="/lib/highlight/highlight.pack.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+<script src="/js/milk.js"></script>
+
+</body>
+</html>
